@@ -11,8 +11,7 @@ addons:
       - gcc-4.8
       - g++-4.8
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y mecab mecab-ipadic libmecab-dev
+  - curl https://gist.githubusercontent.com/dtan4/351d031bec0c3d45cd8f/raw/mecab_install.sh | bash
   - export CC="gcc-4.8"
   - export CXX="g++-4.8"
 script:
