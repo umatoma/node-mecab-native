@@ -12,6 +12,7 @@
     "mocha": "^3.0.1"
   },
   "scripts": {
+    "pretest": "node-gyp configure build",
     "test": "mocha --recursive test",
     "install": "node-gyp rebuild"
   },
