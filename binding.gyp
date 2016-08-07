@@ -4,7 +4,7 @@
     "targets": [
         {
             "target_name": "mecab",
-            "sources": ["mecab.cpp"],
+            "sources": ["src/mecab.cpp"],
             "include_dirs": [
                 "<!(node -e \"require('nan')\")",
                 "<!(mecab-config --inc-dir)"
