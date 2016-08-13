@@ -29,7 +29,10 @@ MeCab_Tagger::MeCab_Tagger(const char *option) {
   delete [] p;
   if (! tagger) throw MeCab::getLastError();
 }
-MeCab_Tagger::~MeCab_Tagger() {}
+
+MeCab_Tagger::~MeCab_Tagger() {
+  delete tagger;
+}
 
 void MeCab_Tagger::Init(v8::Local<v8::Object> exports) {
   v8::Local<v8::FunctionTemplate> tpl = Nan::New<v8::FunctionTemplate>(New);
